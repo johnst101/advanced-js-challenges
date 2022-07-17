@@ -42,10 +42,12 @@ async function postsByUser(uid) {
 
 postsByUser(4);
 
-// Q
+// Q6: First 6 incomplete todos
+async function firstSixIncomplete(status) {
+  const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const result = await promise.json();
+  const incompleteTasks = result.filter(element => element.completed).slice(0, 6);
+  console.log(incompleteTasks);
+}
 
-// Q
-
-// Q
-
-// Q
+firstSixIncomplete(0);
