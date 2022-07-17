@@ -30,10 +30,17 @@ console.log(
   ])
 );
 
-// Q4: Promises
+// Q4: Promises (watched a bunch of videos on this)
 
+// Q5: Find all the posts by a single user
+async function postsByUser(uid) {
+  const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const result = await promise.json();
+  const posts = result.filter(element => element.userId === uid);
+  console.log(posts);
+}
 
-// Q
+postsByUser(4);
 
 // Q
 
